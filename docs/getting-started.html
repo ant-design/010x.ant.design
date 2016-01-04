@@ -193,8 +193,8 @@
     <script src="../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.4',
-        stable: '0.10.4'
+        latest: '0.10.5',
+        stable: '0.10.5'
       };
     </script>
     <script src="../dist/demo.js"></script>
@@ -562,10 +562,7 @@
 </ul>
 <h2 id="标准开发">标准开发<a href="#标准开发" class="anchor">#</a> </h2><p>实际项目开发中，你会需要对 ES2015 和 JSX 代码的构建、调试、代理、打包部署等一系列工程化的需求。
 我们提供了一套 <code>npm</code> + <code>webpack</code> 的开发工具链来辅助开发，下面我们用一个简单的实例来说明。</p>
-<h3 id="1-安装命令行工具">1. 安装命令行工具<a href="#1-安装命令行工具" class="anchor">#</a> </h3><blockquote>
-<p>使用 <code>antd-init</code> 前，务必确认 <a href="https://nodejs.org/en/">Node.js</a> 已经升级到 v4.x 或以上。</p>
-</blockquote>
-<div class="highlight"><pre><code class="bash">$ npm install antd-init -g</code></pre></div><p><a href="https://github.com/ant-tool/xtool/#使用说明">更多使用说明</a>。</p>
+<h3 id="1-安装命令行工具">1. 安装命令行工具<a href="#1-安装命令行工具" class="anchor">#</a> </h3><div class="highlight"><pre><code class="bash">$ npm install antd-init -g</code></pre></div><p><a href="https://github.com/ant-design/antd-bin#使用说明">更多使用说明</a>。</p>
 <h3 id="2-创建一个项目">2. 创建一个项目<a href="#2-创建一个项目" class="anchor">#</a> </h3><p>使用命令行进行初始化。</p>
 <div class="highlight"><pre><code class="bash">$ mkdir antd-demo &amp;&amp; <span class="hljs-built_in">cd</span> antd-demo
 $ antd-init
@@ -629,10 +626,7 @@ $ npm install</code></pre></div><p>若安装缓慢报错，可尝试用 <code>cn
   <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"/common.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- 引入入口文件 --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"/index.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span></code></pre></div><h2 id="自行构建">自行构建<a href="#自行构建" class="anchor">#</a> </h2><p>如果想自己维护工作流，我们推荐使用 <a href="http://webpack.github.io/">webpack</a> 进行构建和调试，可以参考我们所使用的 <a href="https://github.com/ant-tool/atool-build/blob/master/src/getWebpackCommonConfig.js">webpack 配置</a>。</p>
-<h3 id="改变主色系">改变主色系<a href="#改变主色系" class="anchor">#</a> </h3><ul>
-<li><a href="https://github.com/ant-tool/xtool/tree/master/examples/customize-antd-theme">配置代码示例</a></li>
-</ul>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span></code></pre></div><h2 id="自行构建">自行构建<a href="#自行构建" class="anchor">#</a> </h2><p>如果想自己维护工作流，我们推荐使用 <a href="http://webpack.github.io/">webpack</a> 进行构建和调试，可以参考我们所使用的 <a href="https://github.com/ant-design/antd-build/blob/master/lib/webpack.common.config.js">webpack 配置</a>。</p>
 <h2 id="小甜点">小甜点<a href="#小甜点" class="anchor">#</a> </h2><ul>
 <li>你可以享用 <code>npm</code> 生态圈里的所有模块。</li>
 <li>我们使用了 <code>babel</code>，试试用 <a href="http://babeljs.io/blog/2015/06/07/react-on-es6-plus/">ES6</a> 的写法来提升编码的愉悦感。</li>

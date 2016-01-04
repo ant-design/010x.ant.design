@@ -70,17 +70,13 @@ var Test = React.createClass({
     // 使用受控属性 current，方便外部设置页数
     var pagination = this.state.pagination;
     pagination.current = page;
-    this.setState({
-      pagination: pagination,
-      dataSource: dataSource.clone()
-    });
+    this.setState({ pagination: pagination });
   },
   refresh: function refresh() {
     // 回到第一页
     var pagination = this.state.pagination;
     pagination.current = 1;
     this.setState({
-      pagination: pagination,
       dataSource: dataSource.clone()
     });
   },
@@ -90,10 +86,10 @@ var Test = React.createClass({
     pagination.current = 1;
     // 可以修改原来的 dataSource 再发请求
     this.setState({
-      pagination: pagination,
       dataSource: dataSource.clone({
         data: { city: 'hz' }
-      })
+      }),
+      pagination: pagination
     });
   },
   render: function render() {
@@ -181,18 +177,14 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
     <span class="hljs-comment">// 使用受控属性 current，方便外部设置页数</span>
     <span class="hljs-keyword">const</span> pagination = <span class="hljs-keyword">this</span>.state.pagination;
     pagination.current = page;
-    <span class="hljs-keyword">this</span>.setState({
-      pagination,
-      dataSource: dataSource.clone(),
-    });
+    <span class="hljs-keyword">this</span>.setState({ pagination });
   },
   refresh() {
     <span class="hljs-comment">// 回到第一页</span>
     <span class="hljs-keyword">const</span> pagination = <span class="hljs-keyword">this</span>.state.pagination;
     pagination.current = <span class="hljs-number">1</span>;
     <span class="hljs-keyword">this</span>.setState({
-      pagination,
-      dataSource: dataSource.clone(),
+      dataSource: dataSource.clone()
     });
   },
   changeAndRefresh() {
@@ -201,10 +193,10 @@ ReactDOM.render(React.createElement(Test, null), document.getElementById('compon
     pagination.current = <span class="hljs-number">1</span>;
     <span class="hljs-comment">// 可以修改原来的 dataSource 再发请求</span>
     <span class="hljs-keyword">this</span>.setState({
-      pagination,
       dataSource: dataSource.clone({
         data: { city: <span class="hljs-string">'hz'</span> }
       }),
+      pagination,
     });
   },
   render() {

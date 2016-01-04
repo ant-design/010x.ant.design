@@ -1,5 +1,4 @@
 import React from 'react';
-import assign from 'object-assign';
 
 function prefixClsFn(prefixCls, ...args) {
   return args.map((s)=> {
@@ -13,13 +12,6 @@ function ieGT9() {
   }
   const documentMode = document.documentMode || 0;
   return documentMode > 9;
-}
-
-function fixControlledValue(value) {
-  if (typeof value === 'undefined' || value === null) {
-    return '';
-  }
-  return value;
 }
 
 class Group extends React.Component {
@@ -69,7 +61,7 @@ class Input extends React.Component {
   }
 
   renderInput() {
-    const props = assign({}, this.props);
+    const props = this.props;
     const prefixCls = props.prefixCls;
     let inputClassName = prefixClsFn(prefixCls, 'input');
     if (!props.type) {
@@ -85,12 +77,9 @@ class Input extends React.Component {
     if(placeholder && ieGT9()){
       placeholder = null;
     }
-    if ('value' in props) {
-      props.value = fixControlledValue(props.value);
-    }
     switch (props.type) {
     case 'textarea':
-      return <textarea {...props} placeholder={placeholder} className={inputClassName} ref="input" />;
+      return <textarea {...props} value={props.value || props.defaultValue} placeholder={placeholder} className={inputClassName} ref="input" />;
     default:
       inputClassName = props.className ? props.className : inputClassName;
       return <input {...props} placeholder={placeholder} className={inputClassName} ref="input"/>;

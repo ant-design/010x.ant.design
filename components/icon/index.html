@@ -193,8 +193,8 @@ Icon 图标 - Ant Design
     <script src="../../static/script.js"></script>
     <script>
       window.antdVersion = {
-        latest: '0.10.4',
-        stable: '0.10.4'
+        latest: '0.10.5',
+        stable: '0.10.5'
       };
     </script>
     <script src="../../dist/demo.js"></script>
@@ -558,19 +558,20 @@ Icon 图标 - Ant Design
       Icon 图标
     </h1>
     <p>有含义的矢量图形，每一个图标打倒一个敌人。</p>
-<h2 id="图标的命名规范">图标的命名规范<a href="#图标的命名规范" class="anchor">#</a> </h2><p>我们为每个图标赋予了语义化的命名，命名规则如下:</p>
+<h2 id="图标的命名规范">图标的命名规范<a href="#图标的命名规范" class="anchor">#</a> </h2><p>我们为每个图标赋予了语义化的命名。只需在 <Icon> 标签内，制定对应的 type 属性即可。</p>
+<p>不同 type 命名规则如下:</p>
 <ul>
 <li><p>实心和描线图标保持同名，用 <code>-o</code> 来区分，比如 <code>question-circle</code>(实心) 和 <code>question-circle-o</code>(描线)；</p>
 </li>
 <li><p>命名顺序：<code>[icon名]-[形状可选]-[描线与否]-[方向可选]</code>。</p>
 </li>
 </ul>
-<h2 id="如何使用">如何使用<a href="#如何使用" class="anchor">#</a> </h2><p>使用 <code>&lt;Icon /&gt;</code> 标签声明组件，指定图标对应的 type 属性，示例代码如下:</p>
-<div class="highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"link"</span> /&gt;</span></code></pre></div><p>最终会渲染为：</p>
-<div class="highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"anticon anticon-${type}"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span></code></pre></div><h2 id="图标列表">图标列表<a href="#图标列表" class="anchor">#</a> </h2><blockquote>
+<h2 id="实现原理">实现原理<a href="#实现原理" class="anchor">#</a> </h2><p>所有的 Icon 标签最终会渲染为</p>
+<div class="highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"anticon anticon-${type}"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span></code></pre></div><h2 id="如何使用">如何使用<a href="#如何使用" class="anchor">#</a> </h2><p>使用 <Icon> 标签申明组件，设置对应的 type 设置需要渲染的图标，示例代码如下:</p>
+<div class="highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Icon</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"link"</span> /&gt;</span></code></pre></div><blockquote>
 <p>点击图标复制代码。</p>
 </blockquote>
-<h3 id="一-方向性图标">一. 方向性图标<a href="#一-方向性图标" class="anchor">#</a> </h3><div id="iconset-direction"></div>
+<h2 id="图标列表">图标列表<a href="#图标列表" class="anchor">#</a> </h2><h3 id="一-方向性图标">一. 方向性图标<a href="#一-方向性图标" class="anchor">#</a> </h3><div id="iconset-direction"></div>
 
 <h3 id="二-提示建议性图标">二. 提示建议性图标<a href="#二-提示建议性图标" class="anchor">#</a> </h3><div id="iconset-hint"></div>
 

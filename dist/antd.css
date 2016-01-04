@@ -3432,13 +3432,13 @@ fieldset[disabled] .ant-btn-ghost.active {
   left: 22px;
 }
 .ant-switch-disabled {
-  cursor: not-allowed;
+  cursor: no-drop;
   background: #f4f4f4;
   border-color: #f4f4f4;
 }
 .ant-switch-disabled:after {
   background: #ccc;
-  cursor: not-allowed;
+  cursor: no-drop;
 }
 .ant-switch-disabled-inner {
   color: #ccc;
@@ -9727,7 +9727,6 @@ label.ant-radio-button-disabled.ant-radio-button-checked {
 .ant-menu-item.ant-menu-submenu-disabled,
 .ant-menu-submenu-title.ant-menu-submenu-disabled {
   color: #999 !important;
-  cursor: not-allowed;
 }
 .ant-menu > .ant-menu-item-divider {
   height: 1px;
